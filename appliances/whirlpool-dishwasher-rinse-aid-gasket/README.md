@@ -126,7 +126,7 @@
 
 ## License
 
-This is a functional replacement part for personal use.
+[CC BY 4.0](../../LICENSE)
 
 ## Contributing
 

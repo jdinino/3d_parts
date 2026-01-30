@@ -10,6 +10,7 @@
 3D printable replacement gasket for the rinse aid compartment on Whirlpool/KitchenAid/Maytag dishwasher detergent dispensers.
 
 <h3 align="center"><a href="gasket_r08.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d_parts/appliances/whirlpool-dishwasher-rinse-aid-gasket/render.html">Interactive Viewer</a></h3>
+<h3 align="center"><a href="https://raw.githubusercontent.com/jdinino/3d_parts/main/appliances/whirlpool-dishwasher-rinse-aid-gasket/gasket_r08.stl" download>Download the Gasket</a></h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Material-PETG-brightgreen" alt="Material: PETG">

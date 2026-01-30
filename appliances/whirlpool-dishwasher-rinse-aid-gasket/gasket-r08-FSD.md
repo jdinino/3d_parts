@@ -178,16 +178,3 @@ corner_radius = 8;          // mm
 revision = "r08";
 ```
 
----
-
-## 11. Approval
-
-| Role | Name | Date | Signature |
-|------|------|------|-----------|
-| Author | | | |
-| Reviewer | | | |
-| Approver | | | |
-
----
-
-**End of Document**

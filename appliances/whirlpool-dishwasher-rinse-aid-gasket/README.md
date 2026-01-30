@@ -1,6 +1,7 @@
 # Whirlpool Dishwasher Rinse Aid Gasket
 
 <p align="center">
+  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fjdinino%2F3d_parts%2Ftree%2Fmain%2Fappliances%2Fwhirlpool-dishwasher-rinse-aid-gasket&label=Views&countColor=%23263759" alt="Views" /><br><br>
   <b>If this part saved you money, consider buying me a coffee!</b><br><br>
   <a href="https://paypal.me/tipscup"><img src="https://img.shields.io/badge/PayPal-Tip_Jar-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal Tip Jar"></a>
 </p>

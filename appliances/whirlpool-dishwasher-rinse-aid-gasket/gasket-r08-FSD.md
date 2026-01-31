@@ -158,8 +158,8 @@ This specification covers:
 
 | File | Description |
 |------|-------------|
-| `gasket_r08.stl` | 3D printable model |
-| `gasket_r08.scad` | OpenSCAD parametric source |
+| `gasket-r08.stl` | 3D printable model |
+| `gasket-r08.scad` | OpenSCAD parametric source |
 | `gasket-r08-FSD.md` | This document |
 
 ---

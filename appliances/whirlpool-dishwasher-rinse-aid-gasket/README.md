@@ -9,8 +9,8 @@
 
 3D printable replacement gasket for the rinse aid compartment on Whirlpool/KitchenAid/Maytag dishwasher detergent dispensers.
 
-<h2 align="center"><a href="https://raw.githubusercontent.com/jdinino/3d_parts/main/appliances/whirlpool-dishwasher-rinse-aid-gasket/gasket_r08.stl" download>Download the Gasket</a></h2>
-<h3 align="center"><a href="gasket_r08.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d_parts/appliances/whirlpool-dishwasher-rinse-aid-gasket/render.html">Interactive Viewer</a></h3>
+<h2 align="center"><a href="https://raw.githubusercontent.com/jdinino/3dparts/main/appliances/whirlpool-dishwasher-rinse-aid-gasket/gasket-r08.stl" download>Download the Gasket</a></h2>
+<h3 align="center"><a href="gasket-r08.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3dparts/appliances/whirlpool-dishwasher-rinse-aid-gasket/render.html">Interactive Viewer</a></h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Material-PETG-brightgreen" alt="Material: PETG">
@@ -112,8 +112,8 @@
 
 | File | Description |
 |------|-------------|
-| `gasket_r08.stl` | 3D printable model |
-| `gasket_r08.scad` | OpenSCAD parametric source |
+| `gasket-r08.stl` | 3D printable model |
+| `gasket-r08.scad` | OpenSCAD parametric source |
 | `gasket-r08-FSD.md` | Functional Specification Document |
 | `render.html` | Interactive 3D preview |
 
@@ -150,5 +150,5 @@ Issues and improvements welcome. Please include:
 ---
 
 <p align="center">
-  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fjdinino%2F3d_parts%2Ftree%2Fmain%2Fappliances%2Fwhirlpool-dishwasher-rinse-aid-gasket&label=Views&countColor=%23263759" alt="Views" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fjdinino%2F3dparts%2Ftree%2Fmain%2Fappliances%2Fwhirlpool-dishwasher-rinse-aid-gasket&label=Views&countColor=%23263759" alt="Views" />
 </p>

@@ -13,7 +13,7 @@ Replacement gasket for rinse aid compartment on Whirlpool/KitchenAid/Maytag dish
 | Height | 4mm |
 | Corner Radius | 8mm |
 | Outer Lip Thickness | 1mm |
-| Groove Width | 3mm |
+| Groove Width | 2mm |
 | Inner Lip Thickness | 1mm |
 | Floor Thickness | 1mm |
 | Groove Depth | 3mm |
@@ -24,19 +24,19 @@ Replacement gasket for rinse aid compartment on Whirlpool/KitchenAid/Maytag dish
     ←─────────── 46mm ───────────→
     ┌─┐                       ┌─┐
     │ │                       │ │  ← Outer lip (1mm)
-    │ │   ┌─┐           ┌─┐   │ │
-    │ │   │ │           │ │   │ │  ← Inner lip (1mm)
-    │ │   │ │           │ │   │ │
-    └─┴───┴─┴───────────┴─┴───┴─┘  ← Floor (1mm)
-      ←3mm→               ←3mm→     ← Groove width
+    │ │  ┌─┐             ┌─┐  │ │
+    │ │  │ │             │ │  │ │  ← Inner lip (1mm)
+    │ │  │ │             │ │  │ │
+    └─┴──┴─┴─────────────┴─┴──┴─┘  ← Floor (1mm)
+      ←2→                 ←2→       ← Groove width
 ```
 
 ### Derived Dimensions
 | Feature | Value |
 |---------|-------|
-| Outer→Inner Distance | 4mm |
-| Inner Lip Outer | 38 × 27mm |
-| Center Floor Area | 36 × 25mm |
+| Outer→Inner Distance | 3mm |
+| Inner Lip Outer | 40 × 29mm |
+| Center Floor Area | 38 × 27mm |
 
 ## Material Requirements
 
@@ -50,7 +50,8 @@ Replacement gasket for rinse aid compartment on Whirlpool/KitchenAid/Maytag dish
 
 | Rev | Date | Changes |
 |-----|------|---------|
-| r09 | Feb 2026 | Width +1mm (34→35mm), current release |
+| r10 | Feb 2026 | Groove width -1mm (3→2mm), current release |
+| r09 | Feb 2026 | Width +1mm (34→35mm) |
 | r08 | Jan 2026 | Height +1mm (3→4mm) |
 | r07 | - | Outer dims finalized (46×34×3) |
 | r01-r06 | - | Development iterations |

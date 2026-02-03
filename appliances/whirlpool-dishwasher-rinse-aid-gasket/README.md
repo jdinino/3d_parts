@@ -9,12 +9,12 @@
 
 3D printable replacement gasket for the rinse aid compartment on Whirlpool/KitchenAid/Maytag dishwasher detergent dispensers.
 
-<h2 align="center"><a href="https://raw.githubusercontent.com/jdinino/3d-parts/main/appliances/whirlpool-dishwasher-rinse-aid-gasket/gasket-r09.stl" download>Download the Gasket</a></h2>
-<h3 align="center"><a href="gasket-r09.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d-parts/appliances/whirlpool-dishwasher-rinse-aid-gasket/render.html">Interactive Viewer</a></h3>
+<h2 align="center"><a href="https://raw.githubusercontent.com/jdinino/3d-parts/main/appliances/whirlpool-dishwasher-rinse-aid-gasket/gasket-r10.stl" download>Download the Gasket</a></h2>
+<h3 align="center"><a href="gasket-r10.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d-parts/appliances/whirlpool-dishwasher-rinse-aid-gasket/render.html">Interactive Viewer</a></h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Material-TPU-brightgreen" alt="Material: TPU">
-  <img src="https://img.shields.io/badge/Revision-r09-blue" alt="Revision: r09">
+  <img src="https://img.shields.io/badge/Revision-r10-blue" alt="Revision: r10">
   <img src="https://img.shields.io/badge/Size-46×35×4mm-orange" alt="Size: 46×35×4mm">
 </p>
 
@@ -79,7 +79,7 @@
 | **Outer Dimensions** | 46 × 35 × 4 mm |
 | **Corner Radius** | 8 mm |
 | **Outer Lip** | 1 mm thick |
-| **Groove Width** | 3 mm |
+| **Groove Width** | 2 mm |
 | **Inner Lip** | 1 mm thick |
 | **Floor Thickness** | 1 mm |
 | **Groove Depth** | 3 mm |
@@ -113,9 +113,9 @@
 
 | File | Description |
 |------|-------------|
-| `gasket-r09.stl` | 3D printable model |
-| `gasket-r09.scad` | OpenSCAD parametric source |
-| `gasket-r09-FSD.md` | Functional Specification Document |
+| `gasket-r10.stl` | 3D printable model |
+| `gasket-r10.scad` | OpenSCAD parametric source |
+| `gasket-FSD.md` | Functional Specification Document |
 | `render.html` | Interactive 3D preview |
 
 ## Installation
@@ -132,7 +132,8 @@
 | r01 | 43×35×5 | 2mm | Initial |
 | r07 | 46×34×3 | 3mm | Outer dims finalized |
 | r08 | 46×34×4 | 3mm | Height +1mm |
-| **r09** | **46×35×4** | **3mm** | **Current release (+1mm width)** |
+| r09 | 46×35×4 | 3mm | Width +1mm |
+| **r10** | **46×35×4** | **2mm** | **Current release (-1mm groove)** |
 
 ## License
 

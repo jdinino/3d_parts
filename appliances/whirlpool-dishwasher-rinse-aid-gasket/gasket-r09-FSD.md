@@ -43,8 +43,8 @@ Replacement gasket for rinse aid compartment on Whirlpool/KitchenAid/Maytag dish
 | Material | Status | Reason |
 |----------|--------|--------|
 | PETG | **Recommended** | Good flexibility, durability, sealing |
+| TPU | Alternative | Excellent flexibility, used in r08 |
 | PLA | Not recommended | Too rigid, poor seal |
-| TPU | Untested | May work for enhanced flexibility |
 
 ## Revision History
 

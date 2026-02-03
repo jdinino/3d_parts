@@ -2,20 +2,20 @@
 
 <p align="center">
   <b>If this part saved you money, consider buying me a thank you!</b><br><br>
-  <a href="https://paypal.me/tipscup"><img src="https://img.shields.io/badge/PayPal-Tip_Jar-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal Tip Jar"></a>
+  <a href="https://paypal.me/jdinino"><img src="https://img.shields.io/badge/PayPal-Tip_Jar-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal Tip Jar"></a>
 </p>
 
 ---
 
 3D printable replacement gasket for the rinse aid compartment on Whirlpool/KitchenAid/Maytag dishwasher detergent dispensers.
 
-<h2 align="center"><a href="https://raw.githubusercontent.com/jdinino/3d-parts/main/appliances/whirlpool-dishwasher-rinse-aid-gasket/gasket-r08.stl" download>Download the Gasket</a></h2>
-<h3 align="center"><a href="gasket-r08.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d-parts/appliances/whirlpool-dishwasher-rinse-aid-gasket/render.html">Interactive Viewer</a></h3>
+<h2 align="center"><a href="https://raw.githubusercontent.com/jdinino/3d-parts/main/appliances/whirlpool-dishwasher-rinse-aid-gasket/gasket-r09.stl" download>Download the Gasket</a></h2>
+<h3 align="center"><a href="gasket-r09.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d-parts/appliances/whirlpool-dishwasher-rinse-aid-gasket/render.html">Interactive Viewer</a></h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Material-TPU-brightgreen" alt="Material: TPU">
-  <img src="https://img.shields.io/badge/Revision-r08-blue" alt="Revision: r08">
-  <img src="https://img.shields.io/badge/Size-46×34×4mm-orange" alt="Size: 46×34×4mm">
+  <img src="https://img.shields.io/badge/Material-PETG-brightgreen" alt="Material: PETG">
+  <img src="https://img.shields.io/badge/Revision-r09-blue" alt="Revision: r09">
+  <img src="https://img.shields.io/badge/Size-46×35×4mm-orange" alt="Size: 46×35×4mm">
 </p>
 
 ## Compatible Part Numbers
@@ -76,7 +76,7 @@
 
 | Parameter | Value |
 |-----------|-------|
-| **Outer Dimensions** | 46 × 34 × 4 mm |
+| **Outer Dimensions** | 46 × 35 × 4 mm |
 | **Corner Radius** | 8 mm |
 | **Outer Lip** | 1 mm thick |
 | **Groove Width** | 3 mm |
@@ -86,36 +86,35 @@
 
 ## Print Settings
 
-### Recommended Material: TPU
+### Recommended Material: PETG
 
 | Setting | Value |
 |---------|-------|
 | Layer Height | 0.2 mm |
 | Wall Count | 3-4 |
 | Infill | 100% |
-| Print Speed | 20-30 mm/s |
-| Nozzle Temp | 220-240°C |
-| Bed Temp | 50-60°C |
-| Cooling | 100% |
+| Print Speed | 40-50 mm/s |
+| Nozzle Temp | 230-250°C |
+| Bed Temp | 70-80°C |
+| Cooling | 50% |
 | Orientation | Flat (floor on bed) |
 | Supports | None required |
-| Direct Drive | Recommended |
 
 ### Material Notes
 
 | Material | Status | Notes |
 |----------|--------|-------|
-| ✅ TPU | **Recommended** | Excellent flexibility, superior sealing |
-| ❌ PETG | Not recommended | Failed 3 tests, insufficient flexibility |
-| ❌ PLA | Not recommended | Too rigid, poor seal |
+| PETG | **Recommended** | Good flexibility, durability, sealing |
+| PLA | Not recommended | Too rigid, poor seal |
+| TPU | Untested | May work for enhanced flexibility |
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `gasket-r08.stl` | 3D printable model |
-| `gasket-r08.scad` | OpenSCAD parametric source |
-| `gasket-r08-FSD.md` | Functional Specification Document |
+| `gasket-r09.stl` | 3D printable model |
+| `gasket-r09.scad` | OpenSCAD parametric source |
+| `gasket-r09-FSD.md` | Functional Specification Document |
 | `render.html` | Interactive 3D preview |
 
 ## Installation
@@ -131,7 +130,8 @@
 |-----|---------------|--------|-------|
 | r01 | 43×35×5 | 2mm | Initial |
 | r07 | 46×34×3 | 3mm | Outer dims finalized |
-| **r08** | **46×34×4** | **3mm** | **Current release** |
+| r08 | 46×34×4 | 3mm | Height +1mm |
+| **r09** | **46×35×4** | **3mm** | **Current release (+1mm width)** |
 
 ## License
 

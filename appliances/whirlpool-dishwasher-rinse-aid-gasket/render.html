@@ -90,7 +90,7 @@
         </div>
 
         <div id="viewer"></div>
-        <div class="controls">🖱️ Drag to rotate • Scroll to zoom • Current revision: r08</div>
+        <div class="controls">Drag to rotate | Scroll to zoom | Current revision: r09</div>
 
         <div class="specs">
             <h2>Specifications</h2>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="spec-item">
                     <div class="spec-label">Width</div>
-                    <div class="spec-value">34 mm</div>
+                    <div class="spec-value">35 mm</div>
                 </div>
                 <div class="spec-item">
                     <div class="spec-label">Height</div>
@@ -177,7 +177,7 @@
         });
 
         // Dimensions (mm)
-        const outerL = 46, outerW = 34, height = 4, cornerR = 8;
+        const outerL = 46, outerW = 35, height = 4, cornerR = 8;
         const lipT = 1, grooveW = 3, floorT = 1;
         const offset = lipT + grooveW;
 
@@ -213,7 +213,7 @@
         ctx.font = 'bold 32px Arial';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText('r08', 64, 32);
+        ctx.fillText('r09', 64, 32);
         const textTex = new THREE.CanvasTexture(canvas);
         const textPlane = new THREE.Mesh(
             new THREE.PlaneGeometry(10, 5),

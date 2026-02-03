@@ -42,7 +42,7 @@ Copy and adapt this structure exactly:
 
 {One sentence description.}
 
-<h2 align="center"><a href="https://raw.githubusercontent.com/jdinino/3d-parts/main/{category}/{folder}/{file}.stl" download>Download the {Part}</a></h2>
+<h2 align="center"><a href="https://github.com/jdinino/3d-parts/releases/download/{release-tag}/{file}.stl">Download the {Part}</a></h2>
 <h3 align="center"><a href="{file}.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d-parts/{category}/{folder}/render.html">Interactive Viewer</a></h3>
 
 <p align="center">
@@ -197,6 +197,23 @@ Add row to `{category}/README.md`:
 
 ---
 
+## Create GitHub Release
+
+Create a release for STL downloads (ensures proper file download instead of browser displaying text):
+
+```bash
+gh release create {release-tag} "{category}/{folder}/{file}.stl" --title "{Part Name} {rXX}" --notes "{Release notes}"
+```
+
+Example:
+```bash
+gh release create r10 "appliances/whirlpool-dishwasher-rinse-aid-gasket/gasket-r10.stl" --title "Rinse Aid Gasket r10" --notes "Groove width reduced from 3mm to 2mm"
+```
+
+Download URL format: `https://github.com/jdinino/3d-parts/releases/download/{release-tag}/{file}.stl`
+
+---
+
 ## Checklist
 
 Before committing, verify:
@@ -209,7 +226,8 @@ Before committing, verify:
 - [ ] render.html
 - [ ] Category README.md updated
 - [ ] All filenames in README match actual files
-- [ ] Download URLs point to correct raw GitHub paths
+- [ ] GitHub Release created with STL file(s)
+- [ ] Download URLs point to GitHub Release assets
 - [ ] Interactive Viewer URL uses GitHub Pages path
 - [ ] Visitor badge URL is properly encoded
 - [ ] License links to `../../LICENSE`

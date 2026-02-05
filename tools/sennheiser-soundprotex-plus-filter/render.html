@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Block Filter - Sennheiser SoundProtex Plus</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; margin-bottom: 5px; font-size: 1.5rem; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 20px; font-size: 0.9rem; }
+        .part-numbers {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .part-num {
+            background: rgba(78, 205, 196, 0.2);
+            border: 1px solid #4ecdc4;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        #viewer {
+            width: 100%;
+            height: 450px;
+            background: #0a0a14;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .controls {
+            text-align: center;
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.8rem;
+        }
+        .specs {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .specs h2 { font-size: 1rem; color: #4ecdc4; margin-bottom: 10px; }
+        .spec-section { margin-bottom: 15px; }
+        .spec-section h3 { font-size: 0.85rem; color: #888; margin-bottom: 8px; }
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+        }
+        .spec-item {
+            background: rgba(255,255,255,0.05);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .spec-label { font-size: 0.65rem; color: #888; text-transform: uppercase; }
+        .spec-value { font-size: 1.1rem; font-weight: 600; color: #4ecdc4; }
+        .brands {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.8rem;
+        }
+        .brands span {
+            display: inline-block;
+            margin: 0 8px;
+            padding: 3px 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Total Block Filter</h1>
+        <p class="subtitle">3D Printable Replacement Part - Sennheiser SoundProtex Plus</p>
+
+        <div class="part-numbers">
+            <span class="part-num">SoundProtex Plus</span>
+            <span class="part-num">TPU</span>
+        </div>
+
+        <div id="viewer"></div>
+        <div class="controls">Drag to rotate | Scroll to zoom | Total Block Filter</div>
+
+        <div class="specs">
+            <h2>Specifications</h2>
+            <div class="spec-section">
+                <h3>Filter - TPU</h3>
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <div class="spec-label">Total Height</div>
+                        <div class="spec-value">4.5 mm</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Base Dia</div>
+                        <div class="spec-value">9 mm</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Stem Dia</div>
+                        <div class="spec-value">6 mm</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Hole Dia</div>
+                        <div class="spec-value">4 mm</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Material</div>
+                        <div class="spec-value">TPU</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brands">
+            Compatible with:
+            <span>Sennheiser SoundProtex Plus</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        const container = document.getElementById('viewer');
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x0a0a14);
+
+        const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+        camera.position.set(15, 10, 15);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        container.appendChild(renderer.domElement);
+
+        scene.add(new THREE.AmbientLight(0x404040, 0.6));
+        const light1 = new THREE.DirectionalLight(0xffffff, 0.8);
+        light1.position.set(50, 50, 50);
+        scene.add(light1);
+        const light2 = new THREE.DirectionalLight(0x4ecdc4, 0.4);
+        light2.position.set(-30, 20, -30);
+        scene.add(light2);
+
+        // Material - orange/amber for TPU filter
+        const filterMat = new THREE.MeshPhongMaterial({
+            color: 0xf5a623, shininess: 60, specular: 0x222222
+        });
+        const holeMat = new THREE.MeshPhongMaterial({ color: 0x0a0a14 });
+
+        // Dimensions (mm) - scaled up 3x for visibility
+        const scale = 3;
+        const baseR = 4.5 * scale;      // 9mm diameter base
+        const baseH = 0.9 * scale;       // base thickness
+        const stemR = 3.0 * scale;       // 6mm diameter stem
+        const stemH = 3.6 * scale;       // stem height
+        const holeR = 2.0 * scale;       // 4mm diameter hole
+        const grooveDepth = 0.5 * scale;
+        const grooveH = 1.5 * scale;
+
+        const filterGroup = new THREE.Group();
+
+        // Base (wide bottom)
+        const baseGeom = new THREE.CylinderGeometry(baseR, baseR, baseH, 48);
+        const base = new THREE.Mesh(baseGeom, filterMat);
+        base.position.y = baseH / 2;
+        filterGroup.add(base);
+
+        // Stem (narrower, on top of base)
+        const stemGeom = new THREE.CylinderGeometry(stemR, stemR, stemH, 48);
+        const stem = new THREE.Mesh(stemGeom, filterMat);
+        stem.position.y = baseH + stemH / 2;
+        filterGroup.add(stem);
+
+        // Grip groove (visual ring cut into stem)
+        const grooveOuterR = stemR + 0.1;
+        const grooveInnerR = stemR - grooveDepth;
+        const grooveGeom = new THREE.TorusGeometry((grooveOuterR + grooveInnerR) / 2, grooveDepth / 2, 16, 48);
+        const groove = new THREE.Mesh(grooveGeom, holeMat);
+        groove.rotation.x = Math.PI / 2;
+        groove.position.y = baseH + grooveH / 2;
+        filterGroup.add(groove);
+
+        // Hole (visual cutout from top)
+        const holeGeom = new THREE.CylinderGeometry(holeR, holeR, stemH + 0.2, 32);
+        const hole = new THREE.Mesh(holeGeom, holeMat);
+        hole.position.y = baseH + stemH / 2;
+        filterGroup.add(hole);
+
+        scene.add(filterGroup);
+
+        // Grid
+        const grid = new THREE.GridHelper(40, 16, 0x333333, 0x222222);
+        grid.position.y = -0.1;
+        scene.add(grid);
+
+        // Controls
+        let isDragging = false, prevMouse = { x: 0, y: 0 };
+        let rotation = { x: 0.4, y: 0.6 };
+        let zoom = 35;
+
+        container.addEventListener('mousedown', e => { isDragging = true; prevMouse = { x: e.clientX, y: e.clientY }; });
+        container.addEventListener('mousemove', e => {
+            if (!isDragging) return;
+            rotation.y += (e.clientX - prevMouse.x) * 0.01;
+            rotation.x += (e.clientY - prevMouse.y) * 0.01;
+            rotation.x = Math.max(-1.5, Math.min(1.5, rotation.x));
+            prevMouse = { x: e.clientX, y: e.clientY };
+        });
+        container.addEventListener('mouseup', () => isDragging = false);
+        container.addEventListener('mouseleave', () => isDragging = false);
+        container.addEventListener('wheel', e => { e.preventDefault(); zoom = Math.max(15, Math.min(60, zoom + e.deltaY * 0.1)); });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            camera.position.x = zoom * Math.sin(rotation.y) * Math.cos(rotation.x);
+            camera.position.y = zoom * Math.sin(rotation.x) + 8;
+            camera.position.z = zoom * Math.cos(rotation.y) * Math.cos(rotation.x);
+            camera.lookAt(0, 6, 0);
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        });
+    </script>
+</body>
+</html>

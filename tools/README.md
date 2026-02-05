@@ -6,4 +6,4 @@
 
 | Part | Brand | Part Numbers | Material | Status |
 |------|-------|--------------|----------|--------|
-| *Coming soon* | | | | |
+| [SoundProtex Plus Filter](sennheiser-soundprotex-plus-filter/) | Sennheiser | SoundProtex Plus | TPU | Tested |

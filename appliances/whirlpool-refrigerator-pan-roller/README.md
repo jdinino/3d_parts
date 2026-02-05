@@ -134,8 +134,8 @@
 
 | Rev | Date | Changes |
 |-----|------|---------|
-| r01-r16 | 2025-02-01 | Development iterations |
-| **r17** | **2025-02-02** | **Final - 3 legs with rib reinforcement, solid wedge, TPU material** |
+| r01-r16 | 2026-02-01 | Development iterations |
+| **r17** | **2026-02-02** | **Final - 3 legs with rib reinforcement, solid wedge, TPU material** |
 
 ## License
 

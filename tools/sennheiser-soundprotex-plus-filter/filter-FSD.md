@@ -16,7 +16,7 @@ Replacement total block filter cap for Sennheiser SoundProtex Plus reusable earp
 | Stem Height | 3.6mm |
 | Groove Height | 1.5mm |
 | Groove Depth | 0.5mm |
-| Material | TPU |
+| Material | TPU, PETG, PLA |
 
 ### Cross Section
 ```
@@ -46,8 +46,8 @@ Replacement total block filter cap for Sennheiser SoundProtex Plus reusable earp
 | Material | Status | Reason |
 |----------|--------|--------|
 | TPU | **Recommended** | Flexible, seals well, comfortable in ear |
-| PETG | Not recommended | Too rigid, poor seal against housing |
-| PLA | Not recommended | Too rigid, uncomfortable, brittle |
+| PETG | Acceptable | Rigid, durable |
+| PLA | Acceptable | Rigid, easy to print |
 
 ## Revision History
 

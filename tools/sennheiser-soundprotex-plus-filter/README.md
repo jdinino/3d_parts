@@ -13,7 +13,7 @@
 <h3 align="center"><a href="filter-r01.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d-parts/tools/sennheiser-soundprotex-plus-filter/render.html">Interactive Viewer</a></h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Material-TPU-brightgreen" alt="Material: TPU">
+  <img src="https://img.shields.io/badge/Material-TPU/PETG/PLA-brightgreen" alt="Material: TPU/PETG/PLA">
   <img src="https://img.shields.io/badge/Revision-r01-blue" alt="Revision: r01">
   <img src="https://img.shields.io/badge/Size-9×4.5mm-orange" alt="Size: 9×4.5mm">
 </p>
@@ -58,8 +58,8 @@
 | Part | Material | Status | Notes |
 |------|----------|--------|-------|
 | Filter | TPU | **Recommended** | Flexible, seals well, comfortable |
-| Filter | PETG | Not recommended | Too rigid, poor seal |
-| Filter | PLA | Not recommended | Too rigid, uncomfortable |
+| Filter | PETG | Acceptable | Rigid, durable |
+| Filter | PLA | Acceptable | Rigid, easy to print |
 
 ## Files
 
@@ -72,7 +72,7 @@
 
 ## Installation
 
-1. Print filter in TPU (flexible)
+1. Print filter in TPU, PETG, or PLA
 2. Remove existing filter from earplug
 3. Press new filter into earplug housing until seated
 

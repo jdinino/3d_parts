@@ -17,12 +17,14 @@ Example: `appliances/whirlpool-refrigerator-pan-roller/`
 | File | Description |
 |------|-------------|
 | `README.md` | Part documentation (see template below) |
-| `{name}-FSD.md` | Specifications document |
-| `{name}.stl` | 3D printable model(s) |
-| `{name}.scad` | OpenSCAD source(s) |
+| `{part}-FSD.md` | Specifications document |
+| `{part}.stl` | 3D printable model(s) |
+| `{part}.scad` | OpenSCAD source(s) |
 | `render.html` | Interactive 3D viewer |
 
-Use OEM part numbers for filenames when available (e.g., `W11578839.stl`).
+Use OEM part numbers for filenames when available (e.g., `W11578839.stl`). Otherwise use a descriptive name (e.g., `gasket.stl`). Do not include revision numbers in filenames.
+
+For multi-part assemblies, include one STL/SCAD pair per component (e.g., `W11578839.stl` + `W11573594.stl`).
 
 ---
 
@@ -42,8 +44,8 @@ Copy and adapt this structure exactly:
 
 {One sentence description.}
 
-<h2 align="center"><a href="https://github.com/jdinino/3d-parts/releases/download/{release-tag}/{file}.stl">Download the {Part}</a></h2>
-<h3 align="center"><a href="{file}.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d-parts/{category}/{folder}/render.html">Interactive Viewer</a></h3>
+<h2 align="center"><a href="https://github.com/jdinino/3d-parts/releases/download/{release-tag}/{part}.stl">Download the {Part}</a></h2>
+<h3 align="center"><a href="{part}.stl">View 3D Model</a> | <a href="https://jdinino.github.io/3d-parts/{category}/{folder}/render.html">Interactive Viewer</a></h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Material-{MATERIAL}-brightgreen" alt="Material">
@@ -71,9 +73,17 @@ Copy and adapt this structure exactly:
 |-----------|-------|
 | **{Dimension}** | {value} mm |
 
+For multi-part assemblies, use a separate subsection and table per component:
+
+### {Component} ({Part Number})
+
+| Parameter | Value |
+|-----------|-------|
+| **{Dimension}** | {value} mm |
+
 ## Print Settings
 
-### {Material Name}
+### {Component} - {Material Name}
 
 | Setting | Value |
 |---------|-------|
@@ -87,27 +97,35 @@ Copy and adapt this structure exactly:
 | Orientation | {description} |
 | Supports | None required |
 
+For multi-part assemblies, repeat print settings per component/material.
+
 ### Material Notes
 
-| Material | Status | Notes |
-|----------|--------|-------|
-| {MATERIAL} | **Recommended** | {reason} |
-| {OTHER} | Not recommended | {reason} |
+| Part | Material | Status | Notes |
+|------|----------|--------|-------|
+| {Component} | {MATERIAL} | **Recommended** | {reason} |
+| {Component} | {OTHER} | Not recommended | {reason} |
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `{name}.stl` | 3D printable model |
-| `{name}.scad` | OpenSCAD parametric source |
-| `{name}-FSD.md` | Functional Specification Document |
+| `{part}.stl` | 3D printable model |
+| `{part}.scad` | OpenSCAD parametric source |
+| `{part}-FSD.md` | Functional Specification Document |
 | `render.html` | Interactive 3D preview |
 
 ## Installation
 
-1. Step one
-2. Step two
-3. Step three
+<!-- Include video if available -->
+<p align="center">
+  <a href="{youtube-url}"><img src="https://img.youtube.com/vi/{video-id}/hqdefault.jpg" alt="Installation Video" width="480"></a>
+</p>
+
+1. Print {component} in {material}
+2. Refer to video above for assembly and installation
+
+<!-- If no video, replace with written steps -->
 
 ## Revision History
 
@@ -199,18 +217,20 @@ Add row to `{category}/README.md`:
 
 ## Create GitHub Release
 
-Create a release for STL downloads (ensures proper file download instead of browser displaying text):
+Create a release for STL downloads (ensures proper file download instead of browser displaying text).
+
+Release tag format: `{part-name}-{rXX}` (e.g., `pan-roller-r17`, `rinse-aid-gasket-r10`).
 
 ```bash
-gh release create {release-tag} "{category}/{folder}/{file}.stl" --title "{Part Name} {rXX}" --notes "{Release notes}"
+gh release create {release-tag} "{category}/{folder}/{part}.stl" --title "{Part Name} {rXX}" --notes "{Release notes}"
 ```
 
 Example:
 ```bash
-gh release create r10 "appliances/whirlpool-dishwasher-rinse-aid-gasket/gasket-r10.stl" --title "Rinse Aid Gasket r10" --notes "Groove width reduced from 3mm to 2mm"
+gh release create pan-roller-r17 "appliances/whirlpool-refrigerator-pan-roller/W11578839.stl" "appliances/whirlpool-refrigerator-pan-roller/W11573594.stl" --title "Pan Roller r17" --notes "3 legs with rib reinforcement, solid wedge, TPU material"
 ```
 
-Download URL format: `https://github.com/jdinino/3d-parts/releases/download/{release-tag}/{file}.stl`
+Download URL format: `https://github.com/jdinino/3d-parts/releases/download/{release-tag}/{part}.stl`
 
 ---
 
